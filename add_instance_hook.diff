@@ -1,0 +1,10 @@
+--- manager.py	2014-01-23 23:58:29.722094699 +0000
++++ manager_hook.py	2014-01-23 23:58:52.815406751 +0000
+@@ -789,6 +789,7 @@
+ 
+         return [_decode(f) for f in injected_files]
+ 
++    @hooks.add_hook("run_instance")
+     def _run_instance(self, context, request_spec,
+                       filter_properties, requested_networks, injected_files,
+                       admin_password, is_first_time, node, instance):
